@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyGaz Dashboard</title>
+  </head>
+  <body>
+    {% block content %}
+    <h1>Welcome to pyGAZ Dashboard</h1>
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout'%}">Logout</a>
+    {% else %}
+    <a href="{% url 'login_url' %}">Login</a>
+    <a href="{% url 'register_url' %}">Register</a>
+    {% endif %} {% endblock %}
+  </body>
+</html>
