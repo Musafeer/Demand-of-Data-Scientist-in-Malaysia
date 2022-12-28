@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'pydashboard',
 ]
 
-LOGIN_REDIRECT_URL = '/pydashboard/dashboard/'
+# LOGIN_REDIRECT_URL = '/pydashboard/dashboard/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = ''
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
