@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+import plotly.express as px
+import pandas as pd
 # Create your views here.
 
 
@@ -10,7 +13,7 @@ def indexView(request):
 
 @login_required()
 def dashboardView(request):
-    return render(request, 'dashboard.html')
+    return render(request, 'testDashboard.html')
 
 
 def registerView(request):
@@ -22,3 +25,47 @@ def registerView(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
+
+def Chart(request):
+    df = px.data.iris()
+
+    # Chart1
+
+    fig1 = px.scatter(df, x="sepal_width", y="sepal_length", color="species",  width=675, height=337.5)
+    chart1 = fig1.to_html()
+
+    # Chart2
+
+    df = px.data.tips()
+    fig2 = px.bar(df,
+                 x="sex",
+                 y="total_bill",
+                 color="smoker",
+                 barmode="group",
+                 facet_row="time",
+                 facet_col="day",
+                 category_orders={
+                     "day": ["Thur", "Fri", "Sat", "Sun"],
+                     "time": ["Lunch", "Dinner"]
+                 })
+    chart2 = fig2.to_html()
+
+    # Chart3
+    df = px.data.gapminder()
+    fig3 = px.scatter(df.query("year==2007"),
+                     x="gdpPercap",
+                     y="lifeExp",
+                     size="pop",
+                     color="continent",
+                     hover_name="country",
+                     log_x=True,
+                     size_max=60)
+
+    chart3 = fig3.to_html()
+
+    context = {
+        'chart1': chart1,
+        'chart2': chart2,
+        "chart3": chart3,
+    }
+    return render(request, 'testDashboard.html', context=context)

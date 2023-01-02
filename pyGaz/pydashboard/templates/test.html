@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -48,38 +48,39 @@
           </ul>
         </div>
       </nav>
-
       <div class="container-fluid h-50">
         <div class="row h-50">
-          <nav
-            class="col-md-1 d-none d-md-block bg-light sidebar nav-pills nav-fill"
-          >
-            <div class="sidebar-sticky">
-              <ul class="nav flex-column mt-3">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#chart1"> Chart 1 </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#chart2"> Chart 2 </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#chart3"> Chart 3 </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#chart4"> Chart 4 </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#chart5"> Chart 5 </a>
-                </li>
+          <!-- <nav
+          class="col-md-1 d-none d-md-block bg-light sidebar nav-pills nav-fill"
+        >
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#chart1"> Chart 1 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chart2"> Chart 2 </a>
+                
+                  Chart 2
+                </button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chart3"> Chart 3 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chart4"> Chart 4 </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#chart5"> Chart 5 </a>
+              </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="#chart6"> Chart 6 </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-          <!-- <div class="d-flex align-items-start">
+              <li class="nav-item">
+                <a class="nav-link" href="#chart6"> Chart 6 </a>
+              </li>
+            </ul>
+          </div>
+        </nav> -->
+          <div class="d-flex align-items-start">
             <div
               class="nav flex-column nav-pills me-3"
               id="v-pills-tab"
@@ -173,7 +174,7 @@
                 provident?
               </div>
             </div>
-          </div> -->
+          </div>
 
           <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
             <div
@@ -183,12 +184,6 @@
             </div>
 
             <!-- Chart 1 -->
-            <div class="card">
-              <div class="card-body">
-                <canvas>
-                {{chart1|safe}}</div>
-                </canvas>
-            </div>
             <div id="chart1" class="container mt-5">
               <canvas id="myChart1"></canvas>
             </div>
@@ -240,7 +235,7 @@
     ></script>
 
     <!-- Chart.js -->
-    <!-- <script>
+    <script>
       // Chart 1
       var ctx1 = document.getElementById("myChart1").getContext("2d");
       var myChart1 = new Chart(ctx1, {
@@ -376,8 +371,8 @@
           },
         },
       });
-    </script> -->
+    </script>
 
     {% endblock %}
   </body>
-</html>
+</html> {% endcomment %}

@@ -9,6 +9,7 @@ pandas = "*"
 seaborn = "*"
 matplotlib = "*"
 plotly = "*"
+django = "*"
 
 [dev-packages]
 
