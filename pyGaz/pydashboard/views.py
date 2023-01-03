@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+import plotly.offline
 import plotly.express as px
 import pandas as pd
 # Create your views here.
@@ -13,7 +14,7 @@ def indexView(request):
 
 @login_required()
 def dashboardView(request):
-    return render(request, 'testDashboard.html')
+    return render(request, 'test2.html')
 
 
 def registerView(request):
@@ -31,7 +32,7 @@ def Chart(request):
 
     # Chart1
 
-    fig1 = px.scatter(df, x="sepal_width", y="sepal_length", color="species",  width=675, height=337.5)
+    fig1 = px.scatter(df, x="sepal_width", y="sepal_length", color="species")
     chart1 = fig1.to_html()
 
     # Chart2
@@ -68,4 +69,4 @@ def Chart(request):
         'chart2': chart2,
         "chart3": chart3,
     }
-    return render(request, 'testDashboard.html', context=context)
+    return render(request, 'test2.html', context)

@@ -6,11 +6,10 @@ from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
     path('', views.indexView, name="home"),
-    path('testDashboard/', views.dashboardView, name="testDashboard"),
-    path('login/', LoginView.as_view(next_page='testDashboard'), name="login_url"),
+    path('test2/', views.dashboardView, name="test2"),
+    path('login/', LoginView.as_view(next_page='test2'), name="login_url"),
     path('register/', views.registerView, name="register_url"),
     path('logout/', LogoutView.as_view(next_page='home'), name="logout"),
-    # path('',include('pyGaz.urls'))
-    path("testDashboard/",Chart,name="Chart")
+    path("test2/",Chart,name="Chart"),
     
 ]
