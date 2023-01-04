@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    {% extends 'index.html' %} {% block content %}
+    <section style="background-color: #f9f9f9">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand" href="#">Welcome, {{user.username}}</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout'%}" onclick="logout()"
+                >Logout</a
+              >
+              <!-- <a href="{% url 'logout'%}">Logout</a> -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+
+        
+      <div class="container-fluid h-50">
+        <div class="row h-50">
+          <nav
+            class="col-md-1 d-none d-md-block bg-light sidebar nav-pills nav-fill"
+          >
+            <div class="sidebar-sticky">
+              <ul class="nav flex-column mt-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#chart1"> Chart 1 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#chart2"> Chart 2 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#chart3"> Chart 3 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#chart4"> Chart 4 </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#chart5"> Chart 5 </a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="#chart6"> Chart 6 </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+
+          <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div
+              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+            >
+              <h1 class="h2">Dashboard</h1>
+            </div> 
+
+            <!-- Chart 1 -->
+             <div class="card">
+              <div class="card-body">
+                <div id="chart1" class="container mt-5">
+                  <canvas id="myChart1"></canvas>
+                </div>
+               </div>
+              </div>
+
+            <!-- Chart 2 -->
+            <div id="chart2" class="container mt-5">
+              <canvas id="myChart2"></canvas>
+            </div>
+
+            <!-- Chart 3 -->
+            <div id="chart3" class="container mt-5">
+              <canvas id="myChart3"></canvas>
+            </div>
+
+            <!-- Chart 4 -->
+            <div id="chart4" class="container mt-5">
+              <canvas id="myChart4"></canvas>
+            </div>
+
+            <!-- Chart 5 -->
+            <div id="chart5" class="container mt-5">
+              <canvas id="myChart5"></canvas>
+            </div>
+
+            <!-- Chart 6 -->
+            <div id="chart6" class="container mt-5">
+              <canvas id="myChart6"></canvas>
+            
+          </main>
+        </div>
+      </div> 
+    </section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.16.0/dist/umd/popper.min.js"
+      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Chart.js -->
+    <script>
+      // Chart 1
+      var ctx1 = document.getElementById("myChart1").getContext("2d");
+      var myChart1 = new Chart(ctx1, {
+        type: "bar",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "Data",
+              data: [12, 19, 3, 5, 2, 3, 20, 33, 23, 14, 25, 10],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+
+      //chart2
+      var ctx2 = document.getElementById("myChart2").getContext("2d");
+      var myChart2 = new Chart(ctx2, {
+        type: "bar",
+        data: {
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun",
+            "Jul",
+            "Aug",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dec",
+          ],
+          datasets: [
+            {
+              label: "Data",
+              data: [12, 19, 3, 5, 2, 3, 20, 33, 23, 14, 25, 10],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+
+    {% endblock %}
+  </body>
+</html>

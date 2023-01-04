@@ -14,25 +14,11 @@ def indexView(request):
 
 @login_required()
 def dashboardView(request):
-    return render(request, 'test2.html')
-
-
-def registerView(request):
-    if request.method == "POST":
-        form = UserCreationForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('login_url')
-    else:
-        form = UserCreationForm()
-    return render(request, 'registration/register.html', {'form': form})
-
-def Chart(request):
     df = px.data.iris()
 
     # Chart1
 
-    fig1 = px.scatter(df, x="sepal_width", y="sepal_length", color="species")
+    fig1 = px.scatter(df, x="sepal_width", y="sepal_length", color="species",height=600, width=1200)
     chart1 = fig1.to_html()
 
     # Chart2
@@ -48,7 +34,7 @@ def Chart(request):
                  category_orders={
                      "day": ["Thur", "Fri", "Sat", "Sun"],
                      "time": ["Lunch", "Dinner"]
-                 })
+                 },height=600, width=1200)
     chart2 = fig2.to_html()
 
     # Chart3
@@ -60,7 +46,8 @@ def Chart(request):
                      color="continent",
                      hover_name="country",
                      log_x=True,
-                     size_max=60)
+                     size_max=60,
+                     height=600, width=1200)
 
     chart3 = fig3.to_html()
 
@@ -70,3 +57,18 @@ def Chart(request):
         "chart3": chart3,
     }
     return render(request, 'test2.html', context)
+
+
+def registerView(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('login_url')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/register.html', {'form': form})
+
+# def Chart(request):
+    
+#     return render(request, 'test2.html', context)
