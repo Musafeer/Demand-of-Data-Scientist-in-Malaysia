@@ -1,0 +1,147 @@
+,location,is_remote,num_is_remote
+0,Kuala Lumpur,False,1345
+1,Petaling Jaya,False,304
+2,Selangor,False,257
+3,Penang_mainland,False,154
+4,Bayan Lepas,False,116
+6,Kuala Lumpur,True,98
+7,Cyberjaya,False,87
+8,George Town,False,76
+9,Shah Alam/Subang,False,76
+11,Johor Bahru,False,62
+12,Johor,False,52
+13,Melaka,False,45
+14,Kuching,False,36
+15,Puchong,False,36
+16,Kulim,False,34
+17,Subang Jaya,False,32
+18,Klang/Port Klang,False,30
+19,Company Confidential,False,30
+20,"Shah Alam/Subang, Shah Alam/Subang",False,26
+21,Perai,False,24
+22,Central,False,20
+23,Putrajaya,False,20
+24,Petaling Jaya,True,18
+25,Bukit Mertajam,False,16
+26,"Klang/Port Klang, Klang/Port Klang",False,16
+27,Penang - Others,False,16
+28,Rawang,False,14
+29,Seremban,False,14
+30,Selangor - Others,False,14
+31,Bedok,False,14
+32,Cyberjaya,True,12
+33,Miri,False,12
+34,Ampang,False,12
+35,"Cheras, Kuala Lumpur",False,12
+36,"Kuala Lumpur, Selangor",False,12
+37,Shah Alam/Subang,True,10
+38,Kota Kinabalu,False,10
+39,Tampines,False,10
+40,Ipoh,False,10
+41,Butterworth,False,8
+42,Muar,False,8
+43,Perak,False,8
+44,Nilai,False,8
+45,Ang Mo Kio,False,8
+46,Kajang/Bangi/Serdang,False,8
+47,Malaysia,True,6
+48,Selangor,True,6
+49,North - Others,False,6
+50,Kedah,False,6
+51,Makati City,False,6
+52,Penang_mainland,True,6
+53,George Town,True,6
+54,Batu Pahat,False,6
+55,Cheras,False,6
+56,Downtown Core,False,6
+57,Singapore,True,6
+58,Subang Jaya,True,4
+59,West,False,4
+60,Bayan Lepas,True,4
+61,Toa Payoh,False,4
+62,Central,True,4
+63,Central - Others,False,4
+64,East - Others,False,4
+65,Hong Kong,False,4
+66,Alor Setar,False,4
+67,"Kuala Lumpur, Cyberjaya",False,4
+68,Yishun,False,4
+69,Johor - Others,False,4
+70,"Johor Bahru, Penang, Sabah, Subang Jaya",False,4
+71,Johor Bahru,True,4
+72,"Johor, Kuala Lumpur, Penang",True,4
+73,Kota Bharu,False,4
+74,"Johor Bahru, Penang",False,4
+75,"Kajang/Bangi/Serdang, Kajang/Bangi/Serdang, Kajang/Bangi/Serdang",False,4
+76,"Shah Alam/Subang, Shah Alam/Subang",True,4
+77,Kota Kinabalu,True,3
+78,Perak - Others,False,2
+79,Terengganu,False,2
+80,United Kingdom,False,2
+81,Semenyih,False,2
+82,Uzbekistan,False,2
+83,"Selangor - Others, Kuala Lumpur, Negeri Sembilan, Perak",True,2
+84,"Selangor, Kuala Lumpur",False,2
+85,Penang - Others,True,2
+86,West - Others,False,2
+87,Teluk Intan,False,2
+88,Taiwan,False,2
+89,"Shah Alam/Subang, Kuching",False,2
+90,"Segamat, Kuala Lumpur",False,2
+91,Pioneer,False,2
+92,Taiping,False,2
+93,Port Dickson,False,2
+94,Puchong,True,2
+95,"Puchong, Shah Alam/Subang",False,2
+96,"Selangor, Penang - Others",False,2
+97,Sungai Petani,False,2
+98,Sabah,False,2
+99,Sandakan,False,2
+100,Selayang,False,2
+101,Alor Gajah,False,2
+102,"Pahang, Terengganu",False,2
+103,Jakarta Pusat,False,2
+104,"Johor, Kuala Lumpur",False,2
+105,"Johor, Kedah, Kuala Lumpur, Melaka, Negeri Sembilan, Selangor",False,2
+106,"Johor, Kedah, Kuala Lumpur, Melaka, Negeri Sembilan, Penang, , , ,",True,2
+107,"Johor Bahru, Shah Alam/Subang",False,2
+108,"Johor Bahru, Muar, Penang",False,2
+109,"Johor Bahru, Muar",False,2
+110,"Johor Bahru, Kuala Lumpur",False,2
+111,Japan,False,2
+112,Jakarta Raya,False,2
+113,East,False,2
+114,Pahang,False,2
+115,Company Confidential,True,2
+116,Changi,False,2
+117,"Cebu (Others), Cebu (Cebu City)",False,2
+118,Bintulu,False,2
+119,Bentong,False,2
+120,"Bayan Lepas, Selangor - Others",False,2
+121,"Bayan Lepas, Perai",False,2
+122,"Ampang, Cheras, Cyberjaya, Klang/Port Klang, Shah Alam/Subang, ,",False,2
+123,"Alor Setar, Terengganu - Others",False,2
+124,"Johor, Kuala Lumpur, Melaka, Penang, Selangor",False,2
+125,"Johor, Melaka, Negeri Sembilan, Pahang, Perak, Klang/Port Klang",True,2
+126,"Johor, Melaka, Negeri Sembilan, Penang, Pahang, Perak,",False,2
+127,"Johor, Perak, Penang, Selangor, Sarawak, Sabah, Melaka, ,",False,2
+128,Negeri Sembilan - Others,False,2
+129,National Capital Reg,False,2
+130,"Melaka, Alor Gajah",True,2
+131,Langkawi,True,2
+132,Kulim,True,2
+133,Kuantan,False,2
+134,Kuala Terengganu,False,2
+135,"Kuala Lumpur, Tanjung Bungah/Teluk Bahang, Kuantan, ,",False,2
+136,"Kuala Lumpur, Sungai Petani, Kota Bharu, Selangor",True,2
+137,"Kuala Lumpur, Selangor",True,2
+138,"Kuala Lumpur, Petaling Jaya",False,2
+139,"Kuala Lumpur, Hong Kong",False,2
+140,"Kuala Lumpur, Cheras",False,2
+141,"Kuala Lumpur, Bayan Lepas",False,2
+142,Kota Tinggi,False,2
+143,"Klang/Port Klang, Kuala Lumpur",False,2
+144,Kajang/Bangi/Serdang,True,2
+145,Jurong West,False,2
+146,"Johor, Selangor",True,2
+147,"Kuala Lumpur, Manila City",False,2

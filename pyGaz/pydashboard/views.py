@@ -2,9 +2,14 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-import plotly.offline
 import plotly.express as px
 import pandas as pd
+import nltk
+from nltk.corpus import stopwords
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
+
 # Create your views here.
 
 
@@ -14,49 +19,69 @@ def indexView(request):
 
 @login_required()
 def dashboardView(request):
-    df = px.data.iris()
+    
+    
+    #Chart0 companies_top20.csv
+    # df = pd.read_csv('')    
+    # fig = px.bar(df, x='jobs', y='companies', text_auto='.2s',color_discrete_sequence=px.colors.qualitative.Set3, orientation='h',
+    #          title="Companies with the most jobs opening")
+    # fig.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
+    # chart0 = fig.to_html()
 
-    # Chart1
+    # Chart1 companies_bottom
+    # df1 = pd.read_csv('')
+    # fig1 = px.bar(df1, x='jobs', y='companies', text_auto='.2s',color_discrete_sequence=px.colors.qualitative.Set1, orientation='h',
+    #          title="Companies with the least jobs opening")
+    # fig1.update_traces(textfont_size=12, textangle=0, textposition="outside", cliponaxis=False)
+    # chart1 = fig1.to_html()
+    
+    # Chart2 location_top
+    # df2 = pd.read_csv('')
+    # fig2 = px.bar(df2, x='job_openings', y='locations', text='job_openings',
+    #          color_discrete_sequence=px.colors.qualitative.Dark2, orientation='h',
+    #          title="Top 20 locations with the most job openings")
+    # chart2 = fig2.to_html()
+    
+    # Chart3a cleaned_is_remote2
+    # df3 = pd.read_csv('')
+    # df3 = df3.head(10)
+    # fig3a = px.histogram(df3, y="location", x='num_is_remote',color="is_remote", orientation='h')
+    # chart3a = fig3a.to_html()
 
-    fig1 = px.scatter(df, x="sepal_width", y="sepal_length", color="species",height=600, width=1200)
-    chart1 = fig1.to_html()
+    # Chart3b cleaned_is_remote2
+    # df3 = pd.read_csv('')
+    # df3 = df3.tail(10)
+    # fig3b = px.histogram(df3, y="location", x='num_is_remote',color="is_remote", orientation='h')
+    # chart3b = fig3b.to_html()
+    
+    # Chart4 worldcloud_df.csv
+    # df4 = pd.read_csv('')
+    # words = []
+    # for phrase in df4.summary.values:
+    #     for word in phrase.split():
+    #         words.append(word)
+    # word_list = ' '.join(words)
 
-    # Chart2
+    # stop_words = stopwords.words('english')
+    # stop_words = set(stop_words)
+    # wordcloud = WordCloud(background_color='black',
+    #                   collocations=False, contour_width=2,
+    #                  ).generate(word_list)
 
-    df = px.data.tips()
-    fig2 = px.bar(df,
-                 x="sex",
-                 y="total_bill",
-                 color="smoker",
-                 barmode="group",
-                 facet_row="time",
-                 facet_col="day",
-                 category_orders={
-                     "day": ["Thur", "Fri", "Sat", "Sun"],
-                     "time": ["Lunch", "Dinner"]
-                 },height=600, width=1200)
-    chart2 = fig2.to_html()
+    # plt.figure(figsize=(8, 7), facecolor='k')
+    # plt.imshow(wordcloud, interpolation="bilinear")
+    # plt.axis('off')
+    # plt.tight_layout(pad=0);
+    
 
-    # Chart3
-    df = px.data.gapminder()
-    fig3 = px.scatter(df.query("year==2007"),
-                     x="gdpPercap",
-                     y="lifeExp",
-                     size="pop",
-                     color="continent",
-                     hover_name="country",
-                     log_x=True,
-                     size_max=60,
-                     height=600, width=1200)
-
-    chart3 = fig3.to_html()
-
-    context = {
-        'chart1': chart1,
-        'chart2': chart2,
-        "chart3": chart3,
-    }
-    return render(request, 'test2.html', context)
+    # context = {
+    #     'chart': chart0,
+    #     'chart1': chart1,
+    #     "chart2": chart2,
+    #     "chart3a": chart3a,
+    #     "chart3b":chart3b,
+    # }
+    return render(request, 'test2.html')
 
 
 def registerView(request):
