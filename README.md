@@ -8,11 +8,19 @@ The data for this project was scrapped using a scrapper built with Selenium.
 
 ## Data Analysis
 
-The data was then analysed using Jupyter Notebook. We used pandas for dataframe manipulation, numpy for numerical operations, plotly for data visualisation, and wordcloud for generating word clouds. We also used pickle to save specialised words for later use.
+In the data analysis phase of this project, we used the following techniques and tools:
+
+- Data manipulation with pandas
+- Numerical operations with numpy
+- Data visualization with plotly
+- Word cloud generation with wordcloud
+- Serialization of specialized words with pickle
 
 ## Web App
 
-We also created a Django web app that requires login and presents a dashboard upon successful login. The dashboard contains Plotly visualisations of the data.
+The Django web app for this project requires login and presents a dashboard upon successful login. The dashboard includes Plotly visualizations of the data, including information on salary demand, locations with the most job postings, companies with the most job postings, remote vs on-site job offers, and data scientist skills.
+
+
 
 ## Technologies Used
 - Selenium
