@@ -9,15 +9,17 @@ from nltk.corpus import stopwords
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from django.views.decorators.csrf import csrf_protect
-
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 
+# @csrf_exempt
 @csrf_protect
 def indexView(request):
     return render(request, 'index.html')
 
 
+# @csrf_protect
 @login_required()
 def dashboardView(request):
 

@@ -5,11 +5,12 @@ name = "pypi"
 
 [packages]
 django = "*"
-pandas = "*"
-plotly = "*"
 numpy = "*"
+plotly = "*"
+matplotlib = "*"
 wordcloud = "*"
 nltk = "*"
+pandas = "*"
 gunicorn = "*"
 
 [dev-packages]
