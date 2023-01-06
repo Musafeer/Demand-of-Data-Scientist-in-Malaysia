@@ -124,4 +124,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'pydashboard/static'),]
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, "staticfiles"))
-CSRF_TRUSTED_ORIGINS = ['https://demand-of-data-scientist-in-malaysia-hjq4-1q38-ma-f7w7i6uxla-as.a.run.app/']
+CSRF_TRUSTED_ORIGINS = ['https://demand-of-data-scientist-in-malaysia-hjq4-1q38-ma-f7w7i6uxla-as.a.run.app']
