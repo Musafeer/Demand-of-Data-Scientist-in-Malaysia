@@ -1,21 +1,16 @@
-,location
-Kuala Lumpur,1443
-Petaling Jaya,322
-Selangor,263
-Penang,160
-Bayan Lepas,120
-Malaysia,115
-Cyberjaya,99
-Shah Alam/Subang,86
-George Town,82
-Singapore,72
-Johor Bahru,66
-Johor,52
-Melaka,45
-Puchong,38
-Kulim,36
-Subang Jaya,36
-Kuching,36
-Company Confidential,32
-"Shah Alam/Subang, Shah Alam/Subang",30
-Klang/Port Klang,30
+State,Count,Latitude,Longitude
+Kedah,48,6.155672,100.569649
+Perak,13,4.69395,101.117577
+Perlis,8,6.443589,100.216599
+Penang,114,5.285153,100.456238
+Negeri Sembilan,27,2.731813,102.252502
+Kelantan,10,6.127463,102.242287
+Sabah,17,5.420404,116.796783
+Pahang,7,3.974341,102.438057
+Selangor,1446,3.509247,101.524803
+Johor,63,1.937344,103.366585
+Terengganu,19,5.333332,103.149999
+Melaka,26,2.200844,102.240143
+Kuala Lumpur,1723,3.140853,101.693207
+Sarawak,50,1.55311,110.345032
+Putrajaya,119,2.926361,101.696445
