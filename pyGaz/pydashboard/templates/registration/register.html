@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    {% extends 'index.html' %} {% block content %}
+    <section class="vh-100" style="background-color: #b8e0d2">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-12 col-lg-10 col-xl-5">
+            <div class="card shadow-2-strong" style="border-radius: 1rem">
+              <div class="card-body p-5 text-center">
+                <h3 class="mb-5">Register</h3>
+                <form method="POST" novalidate>
+                  {% csrf_token %}
+                  <table class="table">
+                    {% for field in form %}
+                    <tr class="form-group">
+                      <td>{{ field.label_tag }}</td>
+                      <td>
+                        {{ field }} {% if field.help_text %}
+                        <small class="form-text text-muted"
+                          >{{ field.help_text }}</small
+                        >
+                        {% endif %}
+                      </td>
+                      <!-- <td>
+                        {% if field.help_text %}
+                        <small class="form-text text-muted"
+                          >{{ field.help_text }}</small
+                        >
+                        {% endif %}
+                      </td> -->
+                    </tr>
+                    {% endfor %}
+                  </table>
+                  <button type="submit" class="btn btn-primary">
+                    Register
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endblock %}
+  </body>
+</html>
+
+<!-- <h1>Create New Account</h1>
+    <form method="POST">
+      {% csrf_token %} {{form.as_p}}
+      <button>Register</button>
+    </form> -->
