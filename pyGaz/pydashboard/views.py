@@ -22,7 +22,7 @@ def dashboardView(request):
 
     # Chart0 companies_top20.csv
     df = pd.read_csv(
-        'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/pyGaz_EDA/final_dataset/companies_top20.csv')
+        'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/Database/companies_top20.csv')
     fig = px.bar(df, x='jobs', y='companies', text_auto='.2s', color_discrete_sequence=px.colors.qualitative.Set3, orientation='h',
                  title="Data Science Job Availability at Leading Companies", width=1200, height=600)
     fig.update_layout(title_font_size=24, title_x=0.5)
