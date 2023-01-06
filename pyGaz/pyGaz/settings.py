@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-i#kec3^u(_nvkg2$twb_sqhucr(j%k#szxyod2xr%&@!!6oe4&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -126,4 +126,4 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_DIRS = [os.path.join(BASE_DIR,'pydashboard/static'),]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'pydashboard/static'),]
