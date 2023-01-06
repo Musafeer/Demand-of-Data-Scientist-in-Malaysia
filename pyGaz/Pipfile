@@ -222,6 +222,7 @@ plotly = "==5.11.0"
 tenacity = "==8.1.0"
 
 [dev-packages]
+autopep8 = "*"
 
 [requires]
 python_version = "3.10"

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body style="background-color: #f9f9f9">
+  <body style="background-color: #B9DFEE">
     {% extends 'index.html' %} {% block content %}
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-2">
@@ -31,7 +31,7 @@
       </nav>
     </div>
 
-        <div class="d-flex align-items-start mt-3 p-2">
+        <div class="d-flex align-items-start mt-3 p-2" style="border-radius:50px">
           <div
             class="nav flex-column nav-pills me-3"
             id="v-pills-tab"
@@ -40,15 +40,13 @@
           ><div class="shadow-lg p-3 mb-5 bg-white rounded ">
             <a
               class="nav-link active"
-              id="v-pills-home-tab"
+              id="v-pills-companies-tab"
               data-bs-toggle="pill"
-              href="#v-pills-home"
+              href="#v-pills-companies"
               role="tab"
-              aria-controls="v-pills-home"
-              aria-selected="true"
-              >Top 10 Companies</a
+              >Companies</a
             >
-            <a
+            <!-- <a
               class="nav-link"
               id="v-pills-profile-tab"
               data-bs-toggle="pill"
@@ -57,26 +55,22 @@
               aria-controls="v-pills-profile"
               aria-selected="false"
               >Bottom 20 Companies</a
-            >
+            > -->
             <a
               class="nav-link"
-              id="v-pills-messages-tab"
+              id="v-pills-remote-tab"
               data-bs-toggle="pill"
-              href="#v-pills-messages"
+              href="#v-pills-remote"
               role="tab"
-              aria-controls="v-pills-messages"
-              aria-selected="false"
               >Remote work</a
             >
             <a
               class="nav-link"
-              id="v-pills-settings-tab"
+              id="v-pills-wordcloud-tab"
               data-bs-toggle="pill"
-              href="#v-pills-settings"
+              href="#v-pills-wordcloud"
               role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              >Skills</a
+              >Wordcloud</a
             >
             <a
               class="nav-link"
@@ -84,8 +78,6 @@
               data-bs-toggle="pill"
               href="#v-pills-location"
               role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
               >Location</a
             >
             
@@ -95,21 +87,17 @@
               data-bs-toggle="pill"
               href="#v-pills-salary"
               role="tab"
-              aria-controls="v-pills-salary"
-              aria-selected="false"
               >Salary</a
             >
             <a
               class="nav-link"
-              id="v-pills-settings-tab"
+              id="v-pills-skills-tab"
               data-bs-toggle="pill"
-              href="#v-pills-settings"
+              href="#v-pills-skills"
               role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
+              >Skills</a
             >
-            <a
+            <!-- <a
               class="nav-link"
               id="v-pills-settings-tab"
               data-bs-toggle="pill"
@@ -128,414 +116,38 @@
               aria-controls="v-pills-settings"
               aria-selected="false"
               ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-              class="nav-link"
-              id="v-pills-settings-tab"
-              data-bs-toggle="pill"
-              href="#v-pills-settings"
-              role="tab"
-              aria-controls="v-pills-settings"
-              aria-selected="false"
-              ></a
-            >
-            <a
-            class="nav-link"
-            id="v-pills-settings-tab"
-            data-bs-toggle="pill"
-            href="#v-pills-settings"
-            role="tab"
-            aria-controls="v-pills-settings"
-            aria-selected="false"
-            ></a
-          >
+            > -->
+            
+            
+            
+           
           </div>
           </div>
           <main class="container-fluid col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div
-              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-            >
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
               <h1 class="h2 ">Demand of Data Science in Malaysia Dashboard</h1>
             </div>
           <div class="tab-content" id="v-pills-tabContent">
             <div
               class="tab-pane fade show active"
-              id="v-pills-home"
-              role="tabpanel"
-              aria-labelledby="v-pills-home-tab"
-            >
+              id="v-pills-companies"
+              role="tabpanel">
             <div class="card shadow-lg p-3 mb-5 bg-white rounded">
                 <div class="card-body">
                   <div id="chart0" class="container mt-2">
                     {{chart0|safe}}
-                    <p>Based on the graph, it appears that Air Asia has the most job openings for data science-related positions, with a total of 85 job postings. This is followed by other companies, such as Ambition Group Malaysia, CIMB, and Vision Technology, which also have a significant number of job openings in this field. There are also several job agencies and other companies that are hiring for data science positions, such as Klkoleo, Infineon, Deloitte, Flex, Experian, and Western Digital. It seems that these top 20 companies are actively hiring for data science positions, indicating a high demand for data science skills in the job market.</p>
+                    <p align="justify">Based on the graph, it appears that Air Asia has the most job openings for data science-related positions, with a total of 85 job postings. This is followed by other companies, such as Ambition Group Malaysia, CIMB, and Vision Technology, which also have a significant number of job openings in this field. There are also several job agencies and other companies that are hiring for data science positions, such as Klkoleo, Infineon, Deloitte, Flex, Experian, and Western Digital. It seems that these top 20 companies are actively hiring for data science positions, indicating a high demand for data science skills in the job market.</p>
                   </div>
-                 </div>
-            </div>
-              </div>
-
-            <div
-              class="tab-pane fade"
-              id="v-pills-profile"
-              role="tabpanel"
-              aria-labelledby="v-pills-profile-tab"
-            >
-            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
-                <div class="card-body">
-                  <div id="chart1" class="container mt-2">
-                    {{chart1|safe}}
-                    <p>Based on the graph, it appears that the bottom 20 companies have relatively few job openings for data science-related positions. The number of job openings in these companies is in the range of 2, with some companies having even fewer job openings. These companies include Yongpeng Solutions, Edwards Lifesciences, Temasek Allied Engineering, Hach Malaysia, Onboard Technologies, George Fischer, Farm Apps, and Datapel Asia. It seems that these companies have a lower demand for data science skills compared to the top 20 companies.</p>
-                  </div>
-                 </div>
                 </div>
-            </div>
+              </div>
+          </div>
+            
 
+            <!-- REMOTE -->
             <div
               class="tab-pane fade"
-              id="v-pills-messages"
-              role="tabpanel"
-              aria-labelledby="v-pills-messages-tab"
-            >
+              id="v-pills-remote"
+              role="tabpanel">
             <div class="card shadow-lg p-3 mb-5 bg-white rounded">
               <div class="card-body">
                 <div id="chart3" class="container mt-2">
@@ -545,75 +157,78 @@
                </div>
               </div>
           </div>
-
+          
+            <!-- WORDCLOUD -->
             <div
               class="tab-pane fade"
-              id="v-pills-settings"
+              id="v-pills-wordcloud"
               role="tabpanel"
-              aria-labelledby="v-pills-settings-tab"
             >
-
-            
             <div class="card shadow-lg p-3 mb-5 bg-white rounded">
               <div class="card-body">
                 <div id="chart3" class="container mt-2">
                   {% load static %}
-            <img src="{% static '/wordcloud.png' %}" alt="My image" height="600", width="1000">
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
-                      ducimus veniam optio porro impedit amet odio aliquam officia non
-                      nobis quisquam soluta repudiandae, earum nulla. </p>
+                  <p style = "text-align:center; font-size: 22px; font-family:sans-serif">What Companies are Looking for in Data Scientists: A Word Cloud Analysis</p>
+            <img src="{% static '/wordcloud.png' %}" alt="My image" height="550" width="800" style="display: block; margin: 0 auto;">
+                  <p>Based on this wordcloud, it appears that companies value experience and system knowledge highly in potential hires for data science positions. Support and data science skills are also important. Analytics, business knowledge, communication skills, machine learning, problem solving, technical skills, teamwork, and leadership are also valued, but to a lesser extent. </p>
                 </div>
                </div>
-          
             </div>
           </div>
-
+        
+          <!-- location -->
           <div
               class="tab-pane fade"
               id="v-pills-location"
               role="tabpanel"
               aria-labelledby="v-pills-location-tab"
             >
-
-            <!-- {% load static %}
-            <img src="{% static '/images/cat.jpg' %}" alt="My image"> -->
             <div class="card shadow-lg p-3 mb-5 bg-white rounded">
               <div class="card-body">
                 <div id="chart3" class="container mt-2">
-                  {{chart3b|safe}}
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
-                      ducimus veniam optio porro impedit amet odio aliquam officia non
-                      nobis quisquam soluta repudiandae, earum nulla. </p>
+                  {{chart5|safe}}
+                  <p>According to the bubble map, the Klang Valley has the highest concentration of demand for data scientists, followed by the states of Penang and Johor.</p>
                 </div>
                </div>
-          
             </div>
           </div>
-
+          <!-- salary -->
           <div
               class="tab-pane fade"
               id="v-pills-salary"
               role="tabpanel"
               aria-labelledby="v-pills-salary-tab"
             >
-
-            <!-- {% load static %}
-            <img src="{% static '/images/cat.jpg' %}" alt="My image"> -->
             <div class="card shadow-lg p-3 mb-5 bg-white rounded">
               <div class="card-body">
                 <div id="chart3" class="container mt-2">
-                  {{chart3b|safe}}
-                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id
-                      ducimus veniam optio porro impedit amet odio aliquam officia non
-                      nobis quisquam soluta repudiandae, earum nulla. </p>
+                  {{chart4|safe}}
+                  <p>The Developer Kaki Survey included 80 salary data points. The average salary, which is calculated to be RM 20,562, may be skewed due to the small sample size and presence of outliers. To better understand the typical salary without the influence of outliers, we can look at the median salary, which is RM 5,075. The salary range for this data set ranges from RM 1,600 to RM 12,500, but it is possible to earn higher salaries with more experience and skills. </p>
                 </div>
                </div>
-          
+            </div>
+          </div>
+
+          <!-- #tOP 10 SKILLS -->
+          <div
+              class="tab-pane fade"
+              id="v-pills-skills"
+              role="tabpanel"
+              aria-labelledby="v-pills-salary-tab"
+            >
+            <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+              <div class="card-body">
+                <div id="chart2" class="container mt-2">
+                  {{chart2|safe}}
+                  <p>Excel remains a highly sought-after skill in the job market, even as new technologies emerge. This may be because many companies, particularly small and medium-sized enterprises, still rely on Excel for data management. SQL is also a crucial skill, particularly for the extraction, transformation, and loading (ETL) process. In addition to these skills, there are various tools and knowledge that are commonly required for data science roles at companies.</p>
+                </div>
+               </div>
             </div>
           </div>
 
 
         </div>
+      </div>
 
         
         
@@ -622,144 +237,7 @@
        
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Chart 1
-        var ctx1 = document.getElementById("myChart1").getContext("2d");
-        var myChart1 = new Chart(ctx1, {
-          type: "bar",
-          data: {
-            labels: [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
-            ],
-            datasets: [
-              {
-                label: "Data",
-                data: [12, 19, 3, 5, 2, 3, 20, 33, 23, 14, 25, 10],
-                backgroundColor: [
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(54, 162, 235, 0.2)",
-                  "rgba(255, 206, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)",
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(54, 162, 235, 0.2)",
-                  "rgba(255, 206, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)",
-                ],
-                borderColor: [
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)",
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)",
-                ],
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
-          },
-        });
-  
-        //chart2
-        var ctx2 = document.getElementById("myChart2").getContext("2d");
-        var myChart2 = new Chart(ctx2, {
-          type: "bar",
-          data: {
-            labels: [
-              "Jan",
-              "Feb",
-              "Mar",
-              "Apr",
-              "May",
-              "Jun",
-              "Jul",
-              "Aug",
-              "Sep",
-              "Oct",
-              "Nov",
-              "Dec",
-            ],
-            datasets: [
-              {
-                label: "Data",
-                data: [12, 19, 3, 5, 2, 3, 20, 33, 23, 14, 25, 10],
-                backgroundColor: [
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(54, 162, 235, 0.2)",
-                  "rgba(255, 206, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)",
-                  "rgba(255, 99, 132, 0.2)",
-                  "rgba(54, 162, 235, 0.2)",
-                  "rgba(255, 206, 86, 0.2)",
-                  "rgba(75, 192, 192, 0.2)",
-                  "rgba(153, 102, 255, 0.2)",
-                  "rgba(255, 159, 64, 0.2)",
-                ],
-                borderColor: [
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)",
-                  "rgba(255, 99, 132, 1)",
-                  "rgba(54, 162, 235, 1)",
-                  "rgba(255, 206, 86, 1)",
-                  "rgba(75, 192, 192, 1)",
-                  "rgba(153, 102, 255, 1)",
-                  "rgba(255, 159, 64, 1)",
-                ],
-                borderWidth: 1,
-              },
-            ],
-          },
-          options: {
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                },
-              ],
-            },
-          },
-        });
-      </script>
+    
   
     {% endblock %}
   </body>
