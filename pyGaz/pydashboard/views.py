@@ -18,7 +18,6 @@ def indexView(request):
     return render(request, 'index.html')
 
 
-@csrf_protect
 @login_required()
 def dashboardView(request):
 
