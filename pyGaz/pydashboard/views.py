@@ -55,7 +55,7 @@ def dashboardView(request):
 
     # Chart3a cleaned_is_remote2
     df3 = pd.read_csv(
-        'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/pyGaz_EDA/final_dataset/cleaned_is_remote2.csv')
+        'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/Database/cleaned_is_remote2.csv')
     df3 = df3.head(10)
     fig3a = px.histogram(df3, y="location", x='num_is_remote', color="is_remote", orientation='h',
                          width=1200, height=600, title="Number of Remote Job Openings by Location")
