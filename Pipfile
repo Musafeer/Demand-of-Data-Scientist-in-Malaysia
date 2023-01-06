@@ -12,6 +12,7 @@ wordcloud = "*"
 nltk = "*"
 pandas = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
