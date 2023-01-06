@@ -54,4 +54,4 @@ python manage.py runserver
 5. Open your web browser and go to http://localhost:8000 to access the web app.
 
 ## Deployed link
-https://pygaz-9abx-master-f7w7i6uxla-as.a.run.app/
+https://demand-of-data-scientist-in-malaysia-hjq4-1q38-ma-f7w7i6uxla-as.a.run.app/
