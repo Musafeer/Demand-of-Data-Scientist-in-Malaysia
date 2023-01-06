@@ -220,6 +220,7 @@ yapf = "==0.32.0"
 zipp = "==1.0.0"
 plotly = "==5.11.0"
 tenacity = "==8.1.0"
+gunicorn = "*"
 
 [dev-packages]
 autopep8 = "*"
