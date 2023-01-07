@@ -237,7 +237,7 @@
        
       </div>
     </div>
-    <script>function csrfSafeMethod(method) {
+    {% comment %} <script>function csrfSafeMethod(method) {
       // these HTTP methods do not require CSRF protection
       return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
   }
@@ -248,7 +248,7 @@
               xhr.setRequestHeader("X-CSRFToken", csrf_token);
           }
       }
-  });</script>
+  });</script> {% endcomment %}
   
     {% endblock %}
   </body>
