@@ -27,7 +27,7 @@ def dashboardView(request):
     df = pd.read_csv(
         'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/Database/companies_top20.csv')
     fig = px.bar(df, x='jobs', y='companies', text_auto='.2s', color_discrete_sequence=px.colors.qualitative.Set3, orientation='h',
-                 title="Data Science Job Availability at Leading Companies", width=1200, height=600)
+                 title="Data Science Job Availability at Leading Companies", width=1000, height=600)
     fig.update_layout(title_font_size=24, title_x=0.5)
     fig.update_traces(textfont_size=12, textangle=0,
                       textposition="outside", cliponaxis=False)
@@ -48,7 +48,7 @@ def dashboardView(request):
     df = pd.read_csv(
         'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/Database/skills.csv')
     fig2 = px.bar(df, x="Skill", y="Count", hover_name="Skill",
-                  title="Top 10 Data Science Skills in Demand", color="Skill", width=1200, height=600)
+                  title="Top 10 Data Science Skills in Demand", color="Skill", width=1000, height=600)
     # Add labels to the chart
     fig2.update_layout(yaxis_title='Number of occurrences',
                        xaxis_title='Skill', title_font_size=24, title_x=0.5)
@@ -61,7 +61,7 @@ def dashboardView(request):
         'https://raw.githubusercontent.com/Musafeer/Demand-of-Data-Scientist-in-Malaysia/main/Database/cleaned_is_remote2.csv')
     df3 = df3.head(10)
     fig3a = px.histogram(df3, y="location", x='num_is_remote', color="is_remote", orientation='h',
-                         width=1200, height=600, title="Number of Remote Job Openings by Location")
+                         width=1000, height=600, title="Number of Remote Job Openings by Location")
     fig3a.update_layout(title_font_size=24, title_x=0.5)
     chart3a = fig3a.to_html()
 
@@ -73,7 +73,7 @@ def dashboardView(request):
 
     # Set the label of the y-axis
     fig.update_layout(yaxis=dict(title="Salary (MYR)"),
-                      title_font_size=24, title_x=0.5, width=1200, height=600)
+                      title_font_size=24, title_x=0.5, width=1000, height=600)
 
     # Set the color of the boxes to blue
     fig.update_traces(marker_color='blue')
@@ -87,7 +87,7 @@ def dashboardView(request):
 
     # Create bubble map
     fig = px.scatter_geo(df, lat="Latitude", lon="Longitude", size="Count", color="State",
-                         title="Demand Based On Location", hover_name="State", size_max=20, width=1200, height=600)
+                         title="Demand Based On Location", hover_name="State", size_max=20, width=1000, height=600)
     fig.update_layout(title_font_size=24, title_x=0.5)
     chart5 = fig.to_html()
 
